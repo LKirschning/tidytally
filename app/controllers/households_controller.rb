@@ -5,6 +5,11 @@ class HouseholdsController < ApplicationController
 
   def create
     @household = Household.new(household_params)
+    if @household.save
+      redirect_to new_room_path
+    else
+      render :new
+    end
   end
 
   private
