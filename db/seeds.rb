@@ -187,12 +187,16 @@ rooms_and_tasks.split("\n\n").each do |paragraph|
   end
 
 
+household = Household.create(name: "Test")
+user = User.create(email: "test@test.de", password: "123456")
+
 
 hash.keys.each do |room|
-  Room.create(name: room)
+  room_instance = Room.create(name: room, household: household)
   p "room created: #{room}"
   hash[room].each do |task|
-    Task.create(name: task, room: room)
+    task_instance = Task.new(name: task, room: room_instance, user: user)
+    task_instance.save!
     p "task created: #{task}"
   end
 end
