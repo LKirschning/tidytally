@@ -13,9 +13,16 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <%# <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12" style="background-color: #212529; height: 100vh">
+        <div class="logo">Tidytally Logo
+        </div>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
