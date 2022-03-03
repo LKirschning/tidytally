@@ -1,6 +1,8 @@
+<h1>CHOOSE HOUSENAME:</h1>
 <%= simple_form_for @household do |f| %>
 <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-<%= f.input :name %>
-<%= f.submit :submit %>
+<%= f.input :name, placeholder: "Boddinstr. **", label: false %>
+
+<%= f.submit :submit, value: "CONTINUE…" %>
     <% end %>
