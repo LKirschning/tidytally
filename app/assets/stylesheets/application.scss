@@ -7,14 +7,28 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+// @import "./node_modules/nes.css/css/nes.css";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "components/logo";
-@import "components/cards";
-@import "components/card-room";
 
 body {
-  color:white;
+  background-color: $body-bg !important;
+  color: white !important;
+  text-align: center !important;
+}
+
+h1 {
+  font-size: x-large !important;
+}
+
+.logo {
+  width: 250px;
+  filter: invert(1);
+}
+
+.logo-small {
+  filter: invert(1);
+  width: 40px;
 }
