@@ -5,8 +5,9 @@ class HouseholdsController < ApplicationController
 
   def create
     @household = Household.new(household_params)
+    @household.user = current_user
     if @household.save
-      redirect_to new_room_path
+      redirect_to rooms_path
     else
       render :new
     end
