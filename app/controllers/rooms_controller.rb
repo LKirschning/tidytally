@@ -1,4 +1,12 @@
 class RoomsController < ApplicationController
+
+  def index
+    @household = Household.find(user: current_user)
+    @rooms = Room.where(household: @household)
+    raise
+  end
+
+
   def new
     @room = Room.new
   end

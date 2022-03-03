@@ -1,7 +1,23 @@
-<h1>rooms</h1>
+<div class="container">
+
+<div class="cards">
+  <div class="row m-2">
+    <div class="card-room" >
+    +
+    </div>
+    </div>
+    <div class="row m-2">
+    <div class="card-room">
+    kitchen</div>
+    </div>
+</div>
+
+
 <%= simple_form_for @room do |f| %>
 <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 <%= f.input :name %>
 <%= f.submit :submit %>
     <% end %>
+
+</div>
