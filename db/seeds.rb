@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 p "Destroying everything"
+Household.destroy_all
+User.destroy_all
 Room.destroy_all
 Task.destroy_all
 p "Database clear"
@@ -187,9 +189,9 @@ rooms_and_tasks.split("\n\n").each do |paragraph|
   end
 
 
-household = Household.create(name: "Test")
-user = User.create(email: "test@test.de", password: "123456")
-
+  user = User.create(email: "test@test.de", password: "123456")
+  household = Household.create(name: "Test", user: user)
+  HouseholdUser.create!(user: user, household: household)
 
 hash.keys.each do |room|
   room_instance = Room.create(name: room, household: household)

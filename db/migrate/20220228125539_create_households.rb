@@ -4,6 +4,8 @@ class CreateHouseholds < ActiveRecord::Migration[6.1]
       t.integer :members
       t.integer :rooms
 
+      t.references :user, foreign_key: true
+
       t.timestamps
     end
   end
