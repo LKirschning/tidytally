@@ -4,7 +4,7 @@
   <% current_user.household.rooms.each do |room| %>
   <div class="row m-2">
     <div class="card-room" >
-    <%=room.name %>
+    <%=link_to room.name,  room_path(room)%>
     </div>
     </div>
     <% end %>
