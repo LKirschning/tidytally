@@ -1,9 +1,9 @@
 class RoomsController < ApplicationController
 
   def index
-    @household = Household.find(user: current_user)
+    @household = current_user.household
     @rooms = Room.where(household: @household)
-    raise
+
   end
 
 

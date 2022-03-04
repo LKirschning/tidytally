@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get "/setup", to: "pages#setup"
   resources :households, only: [:new, :create]
   resources :rooms, only: [:new, :create, :show, :index]
 

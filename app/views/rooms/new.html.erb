@@ -1,18 +1,4 @@
-<div class="container">
-
-<div class="cards">
-  <div class="row m-2">
-    <div class="card-room" >
-    +
-    </div>
-    </div>
-    <div class="row m-2">
-    <div class="card-room">
-    kitchen</div>
-    </div>
-</div>
-
-
+<h1>Which room? </h1>
 <%= simple_form_for @room do |f| %>
 <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
