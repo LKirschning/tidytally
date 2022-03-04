@@ -1,0 +1,16 @@
+<h1>
+<%= @room.name %>
+</h1>
+
+
+<h2>Tasks</h2>
+<li>
+  <% @tasks.each do |task| %>
+    <ul>
+      <%= task.name %>
+    </ul>
+    <% end %>
+</li>
+
+
+<h2><%= link_to "Add tasks", new_room_task_path(@room) %></h2>
