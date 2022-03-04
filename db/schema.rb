@@ -37,9 +37,11 @@ ActiveRecord::Schema.define(version: 2022_03_02_165123) do
   create_table "households", force: :cascade do |t|
     t.integer "members"
     t.integer "rooms"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.index ["user_id"], name: "index_households_on_user_id"
   end
 
   create_table "requests", force: :cascade do |t|

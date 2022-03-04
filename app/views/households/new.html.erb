@@ -4,5 +4,5 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 <%= f.input :name, placeholder: "Boddinstr. **", label: false, input_html: { class: "white-text" } %>
 
-<%= f.submit :submit, value: "CONTINUE…", class: "nes-btn is-success" %>
+<%= f.submit class: "nes-btn is-success" %>
     <% end %>
