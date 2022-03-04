@@ -33,3 +33,17 @@ h1 {
   filter: invert(1);
   width: 40px;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color: white !important;
+}
+
+a {
+  color: yellowgreen;
+  text-decoration: none;
+  &:hover {
+    color: yellowgreen;
+  }
+}
