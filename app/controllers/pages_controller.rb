@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def setup
   end
 
+  def roommate
+    @roommates = []
+  end
+
 end
