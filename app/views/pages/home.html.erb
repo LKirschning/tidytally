@@ -4,7 +4,7 @@
 <br>
 <br>
 <% if user_signed_in? %>
-<%= button_to "PRESS START", new_household_path, class: "nes-btn is-success" %>
+<%= link_to "PRESS START", new_household_path, class: "nes-btn is-success" %>
 <% else %>
-<%= button_to "PRESS START", new_user_session_path, class: "nes-btn is-success" %>
+<%= link_to "PRESS START", new_user_session_path, class: "nes-btn is-success" %>
 <% end %>
