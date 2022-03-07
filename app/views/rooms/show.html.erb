@@ -1,5 +1,5 @@
 <h1>
-<%= @room.name %>
+<%= @room.name.upcase %>
 </h1>
 
 
@@ -13,4 +13,4 @@
 </li>
 
 
-<h2><%= link_to "Add tasks", new_room_task_path(@room) %></h2>
+<h2><%= link_to "Add Task", new_room_task_path(@room) %></h2>

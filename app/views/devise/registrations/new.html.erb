@@ -1,5 +1,8 @@
-<div class="margintop"></div>
+<div class="d-flex justify-content-center">
+  <h1>TidyTally</h1>
+</div>
 <h2>SIGN UP</h2>
+<div class="d-flex justify-content-center">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -20,5 +23,5 @@
     <%= f.button :submit, "READY!", class:"nes-btn is-success" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>
