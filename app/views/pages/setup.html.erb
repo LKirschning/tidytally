@@ -4,10 +4,13 @@
       <%= link_to "Add a room", new_room_path %>
     </div>
     <div class="col">
-      <%= link_to "Add a flatmate",  roommate_path%>
+      <%= link_to "Add a flatmate",  edit_household_path(@household)%>
     </div>
     <div class="col">
       <%= link_to "Show rooms", rooms_path %>
+    </div>
+    <div class="col">
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
     </div>
   </div>
 </div>

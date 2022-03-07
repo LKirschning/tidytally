@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[6.1]
       t.references :room, null: false, foreign_key: true
       t.integer :time_estimate
       t.boolean :completed
-      t.datetime :date
+      t.date :date
 
       t.timestamps
     end
