@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def setup
+    @household = current_user.household
   end
 
   def roommate

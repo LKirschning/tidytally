@@ -1,0 +1,10 @@
+<h1>Add roommates</h1>
+
+<h2>to your household</h2>
+
+<%= simple_form_for(@household, method: :patch, url: household_path) do |f|%>
+  <%= simple_fields_for :other do |o| %>
+    <%= o.input :emails %>
+  <% end %>
+<%= f.submit "Add!" %>
+<% end %>
