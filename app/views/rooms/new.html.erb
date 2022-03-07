@@ -1,4 +1,44 @@
 <h1>Which room? </h1>
+
+<div class="container">
+
+<div class="cards">
+  <div class="row m-2">
+    <div class="card-room" >
+      <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
+    </div>
+       <h5>Kitchen</h5>
+  </div>
+   <div class="row m-2">
+    <div class="card-room" >
+      <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730661_lhm7mv.png" class="object-fit" alt="">
+    </div>
+    <h5>Bathroom</h5>
+  </div>
+
+    <div class="row m-2">
+    <div class="card-room" >
+      <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654307/images%20for%20tidytally/23730663_dfhkz3.png" class="object-fit" alt="">
+    </div>
+    <h5>Office</h5>
+  </div>
+
+    <div class="row m-2">
+    <div class="card-room" >
+      <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654307/images%20for%20tidytally/23730664_favxi7.png" class="object-fit" alt="">
+    </div>
+    <h5>Lounge</h5>
+  </div>
+
+
+  <div class="row m-2">
+    <div class="card-room">
+      <%= "custom" %>
+    </div>
+  </div>
+</div>
+
+
 <%= simple_form_for @room do |f| %>
 <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
