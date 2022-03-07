@@ -1,5 +1,8 @@
-<h2>Sign up</h2>
-
+<div class="d-flex justify-content-center">
+  <h1>TidyTally</h1>
+</div>
+<h2>SIGN UP</h2>
+<div class="d-flex justify-content-center">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
@@ -17,8 +20,8 @@
                 input_html: { autocomplete: "new-password", class: "white-text" } %>
   </div>
   <div class="form-actions">
-    <%= f.button :submit, "SIGN UP", class:"nes-btn is-success" %>
+    <%= f.button :submit, "READY!", class:"nes-btn is-success" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>

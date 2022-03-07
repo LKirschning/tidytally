@@ -1,0 +1,9 @@
+<h1>Dashboard</h1>
+<hr>
+<h2>Your tasks</h2>
+<%sorted_tasks = @user.tasks.sort_by {|task| task.date} %>
+<% sorted_tasks.each do |task|  %>
+<%= task.date %>
+<%= task.name %>
+<% end %>
+<p></p>

@@ -1,9 +1,10 @@
-<h1>Create task</h1>
+<h1>CREATE TASK</h1>
+<%= simple_form_for [@room, @task] do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= f.input :name %>
+  <%= f.input :date %>
+  <%= f.input :interval %>
+  <%= f.submit :submit,  class:"nes-btn is-success" %>
+<% end %>
 
- <form>
-  <label for="fname">Task Name</label><br>
-  <input type="text" id="fname" name="fname"><br>
-</form>
-
-
-<%= link_to "Add!", setup_path, class:"nes-btn is-success" %>
