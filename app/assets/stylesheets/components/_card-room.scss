@@ -1,5 +1,5 @@
 .card-room {
-  overflow: hidden;
+  // overflow: hidden;
   height: 130px;
   width: 130px;
   background: black;
@@ -10,4 +10,14 @@
   border-style: dotted;
   border-color: white;
   border-radius: 10px;
+}
+
+.object-fit {
+  object-fit: cover !important;
+  height: 130px;
+  width: 130px;
+}
+
+h5 {
+  align-content: left;
 }
