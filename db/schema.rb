@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_02_165123) do
+ActiveRecord::Schema.define(version: 2022_03_07_094111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,9 +37,11 @@ ActiveRecord::Schema.define(version: 2022_03_02_165123) do
   create_table "households", force: :cascade do |t|
     t.integer "members"
     t.integer "rooms"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.index ["user_id"], name: "index_households_on_user_id"
   end
 
   create_table "requests", force: :cascade do |t|
@@ -68,10 +70,11 @@ ActiveRecord::Schema.define(version: 2022_03_02_165123) do
     t.bigint "room_id", null: false
     t.integer "time_estimate"
     t.boolean "completed"
-    t.datetime "date"
+    t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
+    t.integer "interval"
     t.index ["room_id"], name: "index_tasks_on_room_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
@@ -92,6 +95,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_165123) do
   add_foreign_key "comments", "users"
   add_foreign_key "household_users", "households"
   add_foreign_key "household_users", "users"
+  add_foreign_key "households", "users"
   add_foreign_key "requests", "tasks"
   add_foreign_key "requests", "users"
   add_foreign_key "rooms", "households"
