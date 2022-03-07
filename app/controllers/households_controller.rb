@@ -13,6 +13,22 @@ class HouseholdsController < ApplicationController
     end
   end
 
+  def edit
+    @household = current_user.household
+    @user = current_user
+  end
+
+  def update
+    # emails = []
+    @household = current_user.household
+    params[:email].each do |email|
+      user = User.find_by(email: email)
+      user.household = @household
+      user.save
+    end
+    redirect_to setup_path
+  end
+
   private
 
   def household_params
