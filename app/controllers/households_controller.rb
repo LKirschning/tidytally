@@ -19,13 +19,9 @@ class HouseholdsController < ApplicationController
   end
 
   def update
-    # emails = []
     @household = current_user.household
-    params[:email].each do |email|
-      user = User.find_by(email: email)
-      user.household = @household
-      user.save
-    end
+    @household.user = User.find_by(email: params[:other][:emails])
+    @household.save
     redirect_to setup_path
   end
 

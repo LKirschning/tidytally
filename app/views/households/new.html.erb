@@ -2,7 +2,7 @@
 <%= simple_form_for @household do |f| %>
 <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-<%= f.input :name, placeholder: "Boddinstr. **", label: false, input_html: { class: "white-text" } %>
-<%= f.submit :submit%>
+<%= f.input :name, placeholder: "Boddinstr. **", label: false,  input_html: { class: "white-text" } %>
+  <%= f.submit :submit%>
 
     <% end %>
