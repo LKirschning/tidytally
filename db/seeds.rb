@@ -55,7 +55,6 @@ wipe electronics
 clean walls
 tidy up (quick)
 tidy up (thorough)
-(special tasks)
 vacuum pillows
 wash blankets
 furniture (wash cover)
@@ -79,7 +78,6 @@ shower clean fittings
 shower wash curtains
 shower clean glass
 clean walls
-(special tasks)
 clean bathtub
 clean trashcan
 clean drains
@@ -113,7 +111,6 @@ vacuum floor
 mop floor
 organize shoe rack
 clean walls
-(special tasks)
 vaccuum stairs
 clean skirting boards
 clean stairwell railing
@@ -165,7 +162,6 @@ trim bushes
 trim hedges
 rake leaves
 mow lawn
-(special)
 clean up BBQ
 fertilize lawn
 prune plants and trees
@@ -177,7 +173,6 @@ shake doormats
 sweep driveway and paths
 clean gutters
 clean trashcans and recycle bins
-(special tasks)
 check airconditioner
 broom pool
 empty pool filter
