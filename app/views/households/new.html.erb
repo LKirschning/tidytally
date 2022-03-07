@@ -1,4 +1,5 @@
-<h1>CHOOSE HOUSENAME:</h1>
+<h1>CHOOSE A HOUSENAME</h1>
+<div class="d-flex justify-content-center">
 <%= simple_form_for @household do |f| %>
 <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -6,3 +7,4 @@
 
 <%= f.submit class: "nes-btn is-success" %>
     <% end %>
+</div>

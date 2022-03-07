@@ -1,16 +1,18 @@
 <div class="container">
-
-<div class="cards">
-  <% current_user.household.rooms.each do |room| %>
-  <div class="row m-2">
-    <div class="card-room" >
-    <%=link_to room.name,  room_path(room)%>
+  <div class="d-flex justify-content-center">
+    <div class="cards">
+      <% current_user.household.rooms.each do |room| %>
+      <div class="row m-2">
+        <div class="card-room" >
+          <%=link_to room.name,  room_path(room)%>
+        </div>
+      </div>
+        <% end %>
+      <div class="row m-2">
+        <div class="card-room">
+          <%= "empty" %>
+        </div>
+      </div>
     </div>
-    </div>
-    <% end %>
-    <div class="row m-2">
-    <div class="card-room">
-    <%= "empty" %>
-    </div>
-    </div>
+  </div>
 </div>
