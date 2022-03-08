@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="row row-cols-1">
     <div class="col">
-      <h2><%= current_user.household.name %></h2>
+      <h2><%= current_user.households.last.name %></h2>
     </div>
     <div class="col">
       <%= link_to "Add a room", new_room_path, class: "nes-btn is-success" %>
