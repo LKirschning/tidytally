@@ -12,6 +12,9 @@ class PagesController < ApplicationController
     @roommates = []
   end
 
+  def roommateavatar
+  end
+
   def dashboard
     @household = current_user.households.last
     @housemates = @household.users

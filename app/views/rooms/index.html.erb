@@ -1,10 +1,16 @@
 <div class="container">
 <div class="cards">
-  <% current_user.households.last.rooms.each do |room| %>
+<% if @household %>
+    <% @household.rooms.each do |room| %>
   <div class="row m-2">
     <div class="card-room" >
     <%=link_to room.name,  room_path(room)%>
+    <% if room.name == "kitchen" %>
+       <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
+    <% end %>
     </div>
     </div>
     <% end %>
+<% end %>
+ </div>
 </div>

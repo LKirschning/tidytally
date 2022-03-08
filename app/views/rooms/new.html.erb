@@ -1,14 +1,15 @@
-
 <h1>Which room? </h1>
 
 <div class="container">
 
 <div class="cards">
   <div class="row m-2">
-    <div class="card-room" >
+  <%= link_to add_room_path(@room , name: "kitchen", household: @household), method: :post do %>
+      <div class="card-room" >
       <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
     </div>
        <h5>Kitchen</h5>
+       <% end %>
   </div>
    <div class="row m-2">
     <div class="card-room" >
@@ -40,7 +41,7 @@
 </div>
 
 
-<h1>CREATE ROOM</h1>
+<h1>CREATE CUSTOM ROOM</h1>
 <div class="d-flex justify-content-center">
 <%= simple_form_for @room do |f| %>
 <%= f.error_notification %>
