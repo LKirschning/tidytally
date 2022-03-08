@@ -1,10 +1,8 @@
-<h1>Add roommates</h1>
-
-<h2>to your household</h2>
-
+<h1>Invite roommates</h1>
+<img src="https://res.cloudinary.com/psmkr/image/upload/v1646673253/images%20for%20tidytally/1541386_wkpxib.png" class="roommate-add">
 <%= simple_form_for(@household, method: :patch, url: household_path) do |f|%>
   <%= simple_fields_for :other do |o| %>
-    <%= o.input :emails %>
+    <%= o.input :email %>
   <% end %>
-<%= f.submit "Add!" %>
+<%= f.submit "Add!", class:"nes-btn is-success" %>
 <% end %>
