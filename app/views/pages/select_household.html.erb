@@ -1,6 +1,9 @@
-<h1>Select Household</h1>
-<% if @household %>
-<%= link_to "#{@household.name}", setup_path %>
-<% else %>
-<%= "No Household found" %>
-<% end %>
+<h1>CHOOSE HOUSE</h1>
+<img src="https://res.cloudinary.com/psmkr/image/upload/v1646739296/images%20for%20tidytally/21959509_oerxoh.png" class="home-setup">
+<div class="d-flex justify-content-center">
+  <% if @household %>
+  <%= link_to "#{@household.name}", setup_path, class:"nes-btn is-success" %>
+  <% else %>
+  <%= "No Household found" %>
+  <% end %>
+</div>

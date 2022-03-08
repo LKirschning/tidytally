@@ -1,4 +1,4 @@
-<h1>CHOOSE A HOUSENAME</h1>
+<h1>CHOOSE A HOUSE NAME</h1>
 <img src="https://res.cloudinary.com/psmkr/image/upload/v1646670824/images%20for%20tidytally/21959505_pg7rot_f1ctqo.png" class="home-setup">
 <div class="d-flex justify-content-center">
 <%= simple_form_for @household do |f| %>
@@ -6,10 +6,10 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <%= f.input :name, placeholder: "Boddinstr. **", label: false,  input_html: { class: "white-text" } %>
 
-  <%= f.submit :Add!, class: "nes-btn is-success"%>
+  <%= f.submit :READY!, class: "nes-btn is-success" %>
 <% end %>
 </div>
 <div class="m-4">
-<h2>HAVE HOUSEHOLD ALREADY?</h2>
-<%= link_to "Click here", select_household_path  %>
+<h2>HAVE A HOUSE ALREADY? LUCKY YOU!</h2>
+<%= link_to "LET'S GO!", select_household_path, class: "nes-btn is-success" %>
 </div>
