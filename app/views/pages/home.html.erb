@@ -1,10 +1,12 @@
-<div class="margintop"></div>
-<br>
+<div class="margintop">
+</div>
 <img src="https://user-images.githubusercontent.com/95690676/156573934-ede6afc4-9237-478e-abf1-45e9acf66e3d.png" class="logo">
-<br>
-<br>
-<% if user_signed_in? %>
-<%= link_to "PRESS START", new_household_path, class: "nes-btn is-success" %>
-<% else %>
-<%= link_to "PRESS START", new_user_session_path, class: "nes-btn is-success" %>
-<% end %>
+<div class="margintop">
+  <div class="d-flex justify-content-center">
+    <% if user_signed_in? %>
+    <%= link_to "PRESS START", new_household_path, class: "nes-btn is-success" %>
+    <% else %>
+    <%= link_to "PRESS START", new_user_session_path, class: "nes-btn is-success" %>
+    <% end %>
+  </div>
+</div>
