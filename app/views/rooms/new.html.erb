@@ -4,7 +4,7 @@
 
 <div class="cards">
   <div class="row m-2">
-  <%= link_to add_room_path(@room , name: "kitchen", household: @household), method: :post do %>
+  <%= link_to add_room_path(@room , name: "Kitchen", household: @household), method: :post do %>
       <div class="card-room" >
       <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
     </div>
@@ -12,24 +12,30 @@
        <% end %>
   </div>
    <div class="row m-2">
+   <%= link_to add_room_path(@room , name: "Bathroom", household: @household), method: :post do %>
     <div class="card-room" >
       <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730661_lhm7mv.png" class="object-fit" alt="">
     </div>
     <h5>Bathroom</h5>
+    <% end %>
   </div>
 
     <div class="row m-2">
+    <%= link_to add_room_path(@room , name: "Office", household: @household), method: :post do %>
     <div class="card-room" >
       <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654307/images%20for%20tidytally/23730663_dfhkz3.png" class="object-fit" alt="">
     </div>
     <h5>Office</h5>
+    <% end %>
   </div>
 
     <div class="row m-2">
+    <%= link_to add_room_path(@room , name: "Lounge", household: @household), method: :post do %>
     <div class="card-room" >
       <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654307/images%20for%20tidytally/23730664_favxi7.png" class="object-fit" alt="">
     </div>
     <h5>Lounge</h5>
+    <% end %>
   </div>
 
 

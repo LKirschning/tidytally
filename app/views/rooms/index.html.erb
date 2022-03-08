@@ -1,16 +1,24 @@
 <div class="container">
-<div class="cards">
-<% if @household %>
-    <% @household.rooms.each do |room| %>
-  <div class="row m-2">
-    <div class="card-room" >
-    <%=link_to room.name,  room_path(room)%>
-    <% if room.name == "kitchen" %>
-       <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
+  <div class="cards">
+    <% if @household %>
+      <div class="row m-2">
+        <% @household.rooms.each do |room| %>
+          <%= link_to add_room_path(room , name: room.name, household: @household), class: "col-6", method: :post do %>
+            <div class="card-room" >
+              <% if room.name.downcase == "kitchen" %>
+                <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
+              <% elsif room.name.downcase == "bathroom" %>
+                <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730661_lhm7mv.png" class="object-fit" alt="">
+              <% elsif room.name.downcase == "lounge" %>
+                <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654307/images%20for%20tidytally/23730664_favxi7.png" class="object-fit" alt="">
+              <% elsif room.name.downcase == "office" %>
+                <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654307/images%20for%20tidytally/23730663_dfhkz3.png" class="object-fit" alt="">
+              <% end %>
+            </div>
+            <h5><%= room.name %></h5>
+          <% end %>
+        <% end %>
+      </div>
     <% end %>
-    </div>
-    </div>
-    <% end %>
-<% end %>
- </div>
+  </div>
 </div>
