@@ -1,5 +1,8 @@
-<div class="margintop"></div>
-<h2>Log in</h2>
+<div class="d-flex justify-content-center">
+  <h1>TidyTally</h1>
+</div>
+<h2>LOG IN</h2>
+<div class="d-flex justify-content-center">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
@@ -14,8 +17,8 @@
   </div>
 
   <div class="form-actions">
-   <%= f.button :submit, "LOG IN", class:"nes-btn is-success" %>
+   <%= f.button :submit, "READY!", class:"nes-btn is-success" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>

@@ -1,7 +1,16 @@
-<%= link_to "Add a room", new_room_path %>
-<hr>
-<%= link_to "Add a flatmate",  edit_household_path(@household)%>
-<hr>
-<%= link_to "Look at rooms", rooms_path %>
-<hr>
-<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<div class="d-flex justify-content-center">
+  <div class="row row-cols-1">
+    <div class="col">
+      <%= link_to "Add a room", new_room_path, class: "nes-btn is-success" %>
+    </div>
+    <div class="col">
+      <%= link_to "Add a flatmate",  edit_household_path(@household), class: "nes-btn is-success" %>
+    </div>
+    <div class="col">
+      <%= link_to "Show rooms", rooms_path, class: "nes-btn is-success" %>
+    </div>
+    <div class="col">
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    </div>
+  </div>
+</div>

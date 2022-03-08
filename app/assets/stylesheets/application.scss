@@ -24,6 +24,10 @@ h1 {
   font-size: x-large !important;
 }
 
+h5 {
+  text-align: left !important;
+}
+
 .logo {
   width: 250px;
   filter: invert(1);
@@ -46,4 +50,13 @@ a {
   &:hover {
     color: yellowgreen;
   }
+}
+
+.home-setup {
+  object-fit: cover !important;
+  height: 250px;
+}
+
+.margintop {
+  margin-top: 80px;
 }
