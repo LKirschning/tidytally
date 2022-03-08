@@ -12,7 +12,6 @@ class RoomsController < ApplicationController
 
   def create
     @household = current_user.households.last
-    # todo: include the household in room_params
     @room = Room.new(room_params)
     @room.household = @household
     if @room.save!
