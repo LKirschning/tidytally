@@ -1,8 +1,13 @@
 <h1>INVITE PLAYER</h1>
 <div class="d-flex justify-content-center">
 <%= simple_form_for(@household, method: :patch, url: household_path) do |f|%>
+<<<<<<< HEAD
+  <%= simple_fields_for resources: do |o| %>
+    <%= o.input :emails %>
+=======
   <%= simple_fields_for :other do |o| %>
     <%= o.input :emails, label: false, placeholder: "email@domain.com" %>
+>>>>>>> 863b568bf5551e30ee2497cebba3e50e350df94c
   <% end %>
   </div>
 <%= f.submit "READY!", class: "nes-btn is-success" %>

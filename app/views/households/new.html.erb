@@ -6,8 +6,10 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <%= f.input :name, placeholder: "Boddinstr. **", label: false,  input_html: { class: "white-text" } %>
 
-  <%= f.submit :submit%>
+  <%= f.submit :Add!, class: "nes-btn is-success"%>
 <% end %>
-
-<h2>Have Household alrady?</h2>
+</div>
+<div class="m-4">
+<h2>HAVE HOUSEHOLD ALREADY?</h2>
 <%= link_to "Click here", select_household_path  %>
+</div>
