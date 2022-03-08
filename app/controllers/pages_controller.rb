@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @household = current_user.household
+    @household = current_user.households.last
     @housemates = @household.users
     @tasks = []
     @household.rooms.each do |room|
