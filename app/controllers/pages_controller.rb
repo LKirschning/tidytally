@@ -28,4 +28,8 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
+  def select_household
+    @household = current_user.household
+  end
+
 end

@@ -1,11 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+  <div class="container-lg">
+    <%= link_to setup_path, class: "navbar-brand" do %>
       <%= image_tag "https://user-images.githubusercontent.com/95690676/156573934-ede6afc4-9237-478e-abf1-45e9acf66e3d.png", class:"logo-small" %>
     <% end %>
     <div class="d-flex justify-content-center">
       <h1>TidyTally</h1>
     </div>
+    <%= link_to dashboard_path do %>
     <%= image_tag "https://user-images.githubusercontent.com/90203758/156769521-e009b94a-21ae-4dd3-8614-025661f9a603.jpg", class: "avatar" %>
+    <% end %>
   </div>
 </div>
