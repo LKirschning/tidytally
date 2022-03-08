@@ -20,8 +20,10 @@ class HouseholdsController < ApplicationController
 
   def update
     @household = current_user.household
-    @household.user = User.find_by(email: params[:other][:emails])
-    @household.save
+    @new_user = User.find_by(email: params[:other][:emails])
+    @new_household_user = HouseholdUser.create(user: @new_user, household: @household)
+    @new_user.household = @household
+    @new_user.save
     redirect_to setup_path
   end
 
