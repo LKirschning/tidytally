@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
 
   def index
-    @household = current_user.household
+    @household = current_user.households.last
     @rooms = Room.where(household: @household)
   end
 
@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @household = current_user.household
+    @household = current_user.households.last
     # todo: include the household in room_params
     @room = Room.new(room_params)
     @room.household = @household

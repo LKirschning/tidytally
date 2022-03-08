@@ -7,6 +7,7 @@ class HouseholdsController < ApplicationController
     @household = Household.new(household_params)
     @household.user = current_user
     if @household.save
+      @household_user = HouseholdUser.create(user: current_user, household: @household)
       redirect_to setup_path
     else
       render :new
@@ -24,6 +25,7 @@ class HouseholdsController < ApplicationController
     @new_household_user = HouseholdUser.create(user: @new_user, household: @household)
     @new_user.household = @household
     @new_user.save
+    # current_user.household = @household
     redirect_to setup_path
   end
 
