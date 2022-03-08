@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "/setup", to: "pages#setup"
   get "/roommate", to: "pages#roommate"
+  get "/avatars", to: "pages#roommateavatar"
   get "/dashboard", to: "pages#dashboard"
   resources :households, only: [:new, :create, :edit, :update]
   resources :rooms, only: [:new, :create, :show, :index] do
