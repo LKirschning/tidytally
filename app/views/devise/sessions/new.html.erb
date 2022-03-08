@@ -5,10 +5,14 @@
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
+                label: false,
+                placeholder: "email@domain.com",
                 required: false,
                 autofocus: true,
                 input_html: { autocomplete: "EMAIL", class: "white-text" } %>
     <%= f.input :password,
+                label: false,
+                placeholder: "******",
                 required: false,
                 as: :text,
                 input_html: { autocomplete: "new-password", class: "white-text" } %>
