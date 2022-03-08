@@ -9,8 +9,8 @@
                 autofocus: true,
                 input_html: { autocomplete: "EMAIL", class: "white-text" } %>
     <%= f.input :password,
-                required: false,
-                as: :text,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password", class: "white-text" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
