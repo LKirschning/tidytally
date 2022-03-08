@@ -7,14 +7,19 @@
 
   <div class="form-inputs">
     <%= f.input :email,
+                label: false,
+                placeholder: "email@domain.com",
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email", class: "white-text" }%>
     <%= f.input :password,
+                label: false,
+                placeholder: "••••••",
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password", class: "white-text" } %>
-    <%= f.input :password_confirmation,
+                <%= f.input :password_confirmation,
+                placeholder: "••••••",
                 required: true,
                 input_html: { autocomplete: "new-password", class: "white-text" } %>
   </div>
