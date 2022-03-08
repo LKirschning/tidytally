@@ -1,6 +1,6 @@
 <div class="container">
 <div class="cards">
-  <% current_user.household.rooms.each do |room| %>
+  <% current_user.households.last.rooms.each do |room| %>
   <div class="row m-2">
     <div class="card-room" >
     <%=link_to room.name,  room_path(room)%>

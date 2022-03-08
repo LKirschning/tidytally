@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     @room = Room.find(params[:room_id])
     @task = Task.new(task_params)
     @task.room = @room
-    @task.user = current_user.household.users.sample
+    @task.user = current_user.households.last.users.sample
     if @task.save
       redirect_to room_path(@room)
     else

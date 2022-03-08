@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def setup
-    @household = current_user.household
+    @household = current_user.households.last
   end
 
   def roommate
@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @household = current_user.household
+    @household = current_user.households.last
     @housemates = @household.users
     @tasks = []
     @household.rooms.each do |room|
@@ -26,6 +26,10 @@ class PagesController < ApplicationController
       task.user = @housemates.sample
     end
     @user = current_user
+  end
+
+  def select_household
+    @household = current_user.household
   end
 
 end
