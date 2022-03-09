@@ -20,6 +20,17 @@ class TasksController < ApplicationController
     end
   end
 
+  def add_task
+    @room = Room.new(name: params[:name])
+    @household = current_user.households.last
+    @room.household = @household
+    if @room.save!
+      redirect_to new_room_path, notice: "You added #{@room.name} to your household"
+    else
+      render :new
+    end
+  end
+
   def assign_to_user
     @tasks = Task.all
     @user = current_user

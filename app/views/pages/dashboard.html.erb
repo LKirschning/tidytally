@@ -1,14 +1,13 @@
-<h1>DASHBOARD</h1>
+<h1>Tasks</h1>
 <hr>
-<h2>Tasks</h2>
-<div class="d-flex flex-wrap align-content-center">
+<div class="container">
 <%sorted_tasks = @user.tasks.sort_by {|task| task.date} %>
 <% sorted_tasks.each do |task|  %>
-<div class="p-2">
-<%= Date.parse("#{task.date}").strftime('%A') %>
-
+<div class="p-3 mt-2  text-center dashed-border">
+<%= Date.parse("#{task.date}").strftime('%A') + ": " + task.room.name%>
+<div>
 <%= task.name %>
-<%= task.room.name %>
+</div>
 </div>
 <% end %>
 </div>
