@@ -1,3 +1,5 @@
+require "date"
+
 class TasksController < ApplicationController
 
   def new
@@ -8,6 +10,7 @@ class TasksController < ApplicationController
   def create
     @room = Room.find(params[:room_id])
     @task = Task.new(task_params)
+    @task.date = Date.today
     @task.room = @room
     @task.user = current_user.households.last.users.sample
     if @task.save
