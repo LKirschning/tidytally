@@ -15,12 +15,13 @@ class HouseholdsController < ApplicationController
   end
 
   def edit
-    @household = current_user.household
+    # raise
+    @household = Household.find(params[:id])
     @user = current_user
   end
 
   def update
-    @household = current_user.household
+    @household = Household.find(params[:id])
     @new_user = User.find_by(email: params[:other][:emails])
     @new_household_user = HouseholdUser.create(user: @new_user, household: @household)
     @new_user.household = @household
