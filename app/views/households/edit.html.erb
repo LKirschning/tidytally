@@ -1,9 +1,10 @@
 <h1>Invite roommates</h1>
-<div class="d-flex justify-content-center">
-<img src="https://res.cloudinary.com/psmkr/image/upload/v1646673253/images%20for%20tidytally/1541386_wkpxib.png" class="roommate-add">
+<img src="https://res.cloudinary.com/psmkr/image/upload/v1646673253/images%20for%20tidytally/1541386_wkpxib.png" class="home-setup">
+<div class="d-flex justify-content-center mx-4">
 <%= simple_form_for(@household, method: :patch, url: household_path) do |f|%>
   <%= simple_fields_for :other do |o| %>
     <%= o.input :emails, label: false, placeholder: "email@domain.com" %>
   <% end %>
 <%= f.submit "LET'S GO!", class: "nes-btn is-success" %>
 <% end %>
+</div>
