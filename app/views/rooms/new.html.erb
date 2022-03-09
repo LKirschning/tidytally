@@ -48,7 +48,7 @@
 
 
 <h1>CREATE CUSTOM ROOM</h1>
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center mx-4">
 <%= simple_form_for @room do |f| %>
 <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
