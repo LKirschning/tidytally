@@ -37,7 +37,8 @@ h5 {
   filter: invert(1);
   width: 40px;
 }
-
+select,
+input[type="number"],
 input[type="text"],
 input[type="email"],
 input[type="password"] {
