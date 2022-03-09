@@ -1,10 +1,10 @@
 <div class="container">
   <h1 class="mt-3">Your Home </h1>
-  <p>Click rooms to add cleaning tasks!</p>
+    <p>Click rooms to add cleaning tasks!</p>
     <div class="d-flex justify-content-around flex-wrap">
       <% if @household %>
         <% @household.rooms.each do |room| %>
-          <%= link_to_room_path(room , name: room.name, household: @household), class: "mt-4", method: :get do %>
+          <%= link_to room_path(room, name: room.name, household: @household), class: "mt-4", method: :get do %>
             <div class="card-room card-fix" >
                 <% if room.name.downcase == "kitchen" %>
                   <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
