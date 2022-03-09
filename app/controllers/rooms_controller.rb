@@ -22,7 +22,7 @@ class RoomsController < ApplicationController
     @household = current_user.households.last
     @room.household = @household
     if @room.save!
-      redirect_to setup_path
+      redirect_to new_room_path, notice: "You added #{@room.name} to your household"
     else
       render :new
     end
@@ -33,7 +33,7 @@ class RoomsController < ApplicationController
     @household = current_user.households.last
     @room.household = @household
     if @room.save!
-      redirect_to setup_path
+      redirect_to new_room_path, notice: "You added #{@room.name} to your household"
     else
       render :new
     end

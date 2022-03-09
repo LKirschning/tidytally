@@ -24,8 +24,13 @@ h1 {
   font-size: x-large !important;
 }
 
+h2 {
+  font-size: large;
+}
+
 h5 {
   text-align: left !important;
+  font-size: 15px;
 }
 
 .logo {
@@ -37,7 +42,8 @@ h5 {
   filter: invert(1);
   width: 40px;
 }
-
+select,
+input[type="number"],
 input[type="text"],
 input[type="email"],
 input[type="password"] {

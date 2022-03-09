@@ -3,7 +3,7 @@
     <% if @household %>
       <div class="row m-2">
         <% @household.rooms.each do |room| %>
-          <%= link_to add_room_path(room , name: room.name, household: @household), class: "col-6", method: :post do %>
+          <%= link_to room_path(room , name: room.name, household: @household), class: "col-6", method: :get do %>
             <div class="card-room" >
               <% if room.name.downcase == "kitchen" %>
                 <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
