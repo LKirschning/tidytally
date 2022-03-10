@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tidytally</title>
-    <title><%= meta_title %></title>
-    <meta name="description" content="<%= meta_description %>">
+    <!-- Primary Meta Tags -->
+<title>TidyTally - GAMIFY YOUR HOME</title>
+<meta name="title" content="TidyTally - GAMIFY YOUR HOME">
+<meta name="description" content="Household chores manager for when your flat needs an 8-bit of cleaning.">
 
-    <!-- Facebook Open Graph data -->
-    <meta property="og:title" content="<%= meta_title %>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= request.original_url %>" />
-    <meta property="og:image" content="<%= meta_image %>" />
-    <meta property="og:description" content="<%= meta_description %>" />
-    <meta property="og:site_name" content="<%= meta_title %>" />
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.tidytally.com/">
+<meta property="og:title" content="TidyTally - GAMIFY YOUR HOME">
+<meta property="og:description" content="Household chores manager for when your flat needs an 8-bit of cleaning.">
+<meta property="og:image" content="https://www.tidytally.com/og_image.jpg">
 
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:title" content="<%= meta_title %>">
-    <meta name="twitter:description" content="<%= meta_description %>">
-    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:image:src" content="<%= meta_image %>">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.tidytally.com/">
+<meta property="twitter:title" content="TidyTally - GAMIFY YOUR HOME">
+<meta property="twitter:description" content="Household chores manager for when your flat needs an 8-bit of cleaning.">
+<meta property="twitter:image" content="https://www.tidytally.com/og_image.jpg">
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -27,7 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <%= favicon_link_tag %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
