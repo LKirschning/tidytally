@@ -4,6 +4,10 @@
 <% if @household %>
 <%= link_to "#{@household.name}", setup_path %>
 <% else %>
+<div>
 <%= "ANMELDUNG NOT POSSIBLE FOR NOW, TRY AGAIN" %>
+<br>
+<%= link_to "GO BACK", new_household_path, class:"nes-btn is-success" %>
+</div>
 <% end %>
 </div>
