@@ -1,13 +1,13 @@
 <h1>TASKS</h1>
 <hr>
 <div class="d-flex flex-wrap align-content-center">
-<%sorted_tasks = @user.tasks.sort_by {|task| task.date} %>
-<% sorted_tasks.each do |task|  %>
-<div class="p-3 m-2 dashed-border">
-<%= Date.parse("#{task.date}").strftime('%A') + ": " + task.room.name%>
-<%= task.name%>
-<% if task.completed %>
-<i class="nes-icon is-medium star"></i>
-<% end %>
+  <% @tasks.each do |task|  %>
+  <% room = task.room %>
+  <div class="p-3 m-2 dashed-border">
+    <%= Date.parse("#{task.date}").strftime('%A') + ": " + task.room.name%>
+    <%= link_to task.name, edit_room_task_path(room, task) %>
+    <% if task.completed %>
+      <i class="nes-icon is-medium star"></i>
+    <% end %>
 </div>
 <% end %>

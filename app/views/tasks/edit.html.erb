@@ -1,0 +1,9 @@
+<h1>Completed?</h1>
+<div>
+<img src="https://res.cloudinary.com/psmkr/image/upload/v1646911181/images%20for%20tidytally/questionbox_npmtvc.png" alt="" class="home-setup mt-2">
+</div>
+<%= "Did you complete #{@task.name} in #{@task.room.name}?" %>
+<div class="container align-content-center">
+<%= link_to :YES!, room_task_path(@room, @task), method: :patch, class: "nes-btn is-success mt-4"  %>
+<%= link_to :NO!, dashboard_path, class: "nes-btn is-error mt-4"  %>
+</div>

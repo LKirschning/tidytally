@@ -26,7 +26,20 @@ class TasksController < ApplicationController
     @roommates = Household.where(id:@user.household)
   end
 
-    private
+  def edit
+    @room = Room.find(params[:room_id])
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @room = Room.find(params[:room_id])
+    @task = Task.find(params[:id])
+    @task.completed = true
+    @task.save
+    redirect_to dashboard_path
+  end
+
+  private
 
   def task_params
     params.require(:task).permit(:name, :date, :interval)
