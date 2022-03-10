@@ -1,13 +1,15 @@
-<h1>DASHBOARD</h1>
+<h1>UPCOMING TASKS</h1>
 <hr>
-<h2>Tasks</h2>
+<img src="https://res.cloudinary.com/psmkr/image/upload/v1646654311/images%20for%20tidytally/PixelBubble_GiphySticker_smaller_ilo15c.gif" class="bubbles">
 <div class="d-flex flex-wrap align-content-center">
 <%sorted_tasks = @user.tasks.sort_by {|task| task.date} %>
 <% sorted_tasks.each do |task|  %>
+<hr>
 <div class="p-2">
-<%= Date.parse("#{task.date}").strftime('%A') %>
+<%= Date.parse("#{task.date}").strftime('%A').upcase %> >
 
-<%= task.name %>
+<img src="https://res.cloudinary.com/psmkr/image/upload/v1646654308/images%20for%20tidytally/315069111180211_rvyuxa.png" class="rat">
+<%= task.name %> in
 <%= task.room.name %>
 </div>
 <% end %>
