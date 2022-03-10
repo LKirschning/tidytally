@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/select_household", to: "pages#select_household"
   resources :households, only: [:new, :create, :edit, :update]
   resources :rooms, only: [:index,:show, :new, :create] do
-    resources :tasks, only: [:new, :create]
+    resources :tasks, only: [:new, :create, :edit, :update]
   end
   post "/add-rooms", to: "rooms#add_room", as: :add_room
 
