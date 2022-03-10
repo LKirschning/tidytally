@@ -4,11 +4,8 @@
 <div class="d-flex flex-wrap align-content-center">
 <%sorted_tasks = @user.tasks.sort_by {|task| task.date} %>
 <% sorted_tasks.each do |task|  %>
-<div class="p-2">
-<%= Date.parse("#{task.date}").strftime('%A') %>
-
+<div class="p-3 m-2 dashed-border">
+<%= Date.parse("#{task.date}").strftime('%A') + ": " + task.room.name%>
 <%= task.name %>
-<%= task.room.name %>
 </div>
 <% end %>
-</div>
