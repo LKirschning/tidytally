@@ -5,6 +5,9 @@
 <% sorted_tasks.each do |task|  %>
 <div class="p-3 m-2 dashed-border">
 <%= Date.parse("#{task.date}").strftime('%A') + ": " + task.room.name%>
-<%= task.name %>
+<%= task.name%>
+<% if task.completed %>
+<i class="nes-icon is-medium star"></i>
+<% end %>
 </div>
 <% end %>
