@@ -1,5 +1,5 @@
 meta_product_name: "TidyTally"
 meta_title: "TidyTally - GAMIFY YOUR HOME"
 meta_description: "Household chores manager for when your flat needs an 8-bit of cleaning."
-meta_image: "341-3412771_png-file-tetris-icon-transparent-png.png" # should exist in `app/assets/images/`
-twitter_account: "@product_twitter_account"   # required for Twitter Cards
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account" # required for Twitter Cards
