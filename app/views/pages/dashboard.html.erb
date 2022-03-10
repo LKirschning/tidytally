@@ -1,13 +1,20 @@
-<h1>TASKS</h1>
-<hr>
-<div class="d-flex flex-wrap align-content-center">
+
+<h1>UPCOMING TASKS</h1>
+<br>
+<img src="https://res.cloudinary.com/psmkr/image/upload/v1646654311/images%20for%20tidytally/PixelBubble_GiphySticker_smaller_ilo15c.gif" class="bubbles mb-3">
+<div class="d-flex flex-wrap align-content-center container">
   <% @tasks.each do |task|  %>
-  <% room = task.room %>
-  <div class="p-3 m-2 dashed-border">
-    <%= Date.parse("#{task.date}").strftime('%A') + ": " + task.room.name%>
-    <%= link_to task.name, edit_room_task_path(room, task) %>
-    <% if task.completed %>
-      <i class="nes-icon is-medium star"></i>
-    <% end %>
-</div>
+    <% room = task.room %>
+    <hr>
+    <div class="p-2 dashed-border mb-3 w-100">
+      <%= Date.parse("#{task.date}").strftime('%A').upcase %>
+          <% if task.completed %>
+            <i class="nes-icon is-medium star"></i>
+          <% else %>
+            <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654308/images%20for%20tidytally/315069111180211_rvyuxa.png" class="rat">
+          <% end %>
+        <br>
+      <%= link_to task.name, edit_room_task_path(room, task) %> in
+      <%= task.room.name %>
+  </div>
 <% end %>
