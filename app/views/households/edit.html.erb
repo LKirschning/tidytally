@@ -1,5 +1,7 @@
 <h1>Invite roommates</h1>
 <img src="https://res.cloudinary.com/psmkr/image/upload/v1646673253/images%20for%20tidytally/1541386_wkpxib.png" class="home-setup">
+<p>Make sure your roommate </p>
+<p>already signed up!</p>
 <div class="d-flex justify-content-center mx-4">
 <%= simple_form_for(@household, method: :patch, url: household_path(@household)) do |f|%>
   <%= simple_fields_for :other do |o| %>
