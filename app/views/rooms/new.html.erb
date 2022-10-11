@@ -1,12 +1,12 @@
 
-<div class="container" style="width: 360px">
+<div class="container">
   <div class="">
     <h1 class="mt-3">Which room? </h1>
     <%= link_to "> Go To My Household", rooms_path, class: "" %>
   </div>
 
   <div class="cards mt-3">
-    <div class="d-flex justify-content-center" style="width: 140px">
+    <div class="d-flex justify-content-center" >
     <%= link_to add_room_path(@room , name: "Kitchen", household: @household), method: :post do %>
       <div class="card-room" >
         <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730662_llpktg.png" class="object-fit" alt="">
@@ -15,7 +15,7 @@
     <% end %>
     </div>
 
-    <div class="d-flex justify-content-center" style="width: 140px">
+    <div class="d-flex justify-content-center">
     <%= link_to add_room_path(@room , name: "Bathroom", household: @household), method: :post do %>
       <div class="card-room" >
         <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654306/images%20for%20tidytally/23730661_lhm7mv.png" class="object-fit" alt="">
@@ -25,7 +25,7 @@
     </div>
 
 
-    <div class="d-flex justify-content-center" style="width: 140px">
+    <div class="d-flex justify-content-center">
     <%= link_to add_room_path(@room , name: "Office", household: @household), method: :post do %>
       <div class="card-room" >
         <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654307/images%20for%20tidytally/23730663_dfhkz3.png" class="object-fit" alt="">
@@ -35,7 +35,7 @@
     </div>
 
 
-    <div class="d-flex justify-content-center" style="width: 140px">
+    <div class="d-flex justify-content-center" >
     <%= link_to add_room_path(@room , name: "Lounge", household: @household), method: :post do %>
       <div class="card-room" >
         <img src="https://res.cloudinary.com/psmkr/image/upload/v1646654307/images%20for%20tidytally/23730664_favxi7.png" class="object-fit" alt="">
